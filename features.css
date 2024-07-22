@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,7 +17,6 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.4);
 }
 
 .navbar {
@@ -63,58 +67,15 @@ header {
     margin: 4px 0;
 }
 
-.container-topic {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .section {
     margin: 20px 0;
 }
-
-#home{
-    font-size: 1.5rem;
-}
-
-#home, #location-input {
-    text-align: center;
-}
-
-.input {
-    padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    max-width: 300px;
-}
-
-.button {
-    padding: 10px 20px;
-    margin: 10px 0;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.button:hover {
-    background-color: #45a049;
-}
-
-#map {
-    /* position: relative; */
-    height: 400px;
-    width: 400px;
-    display: flex;
-    justify-items: end;
-}
-
 
 footer {
     background-color: #f1f1f1;
     text-align: center;
     padding: 10px 0;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -140,4 +101,3 @@ footer {
         display: flex;
     }
 }
-
