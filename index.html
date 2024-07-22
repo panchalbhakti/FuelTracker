@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="#">Fuel Tracker</a>
+            </div>
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main class="container-topic">
+        <section id="home" class="section">
+            <h2>Welcome to Fuel Tracker</h2>
+            <p>Your reliable source for finding nearby petrol pumps and EV charging stations.</p>
+        </section>
+        <section id="results" class="section">
+        </section>
+        <div class="main-container">
+            <div id="map"></div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BGWy5q1Hl_3ZQIsn9XfBX6_QisZHTMI&callback=initMap" async defer></script> 
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fuel Tracker</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
