@@ -109,3 +109,53 @@ function handleLocationError(browserHasGeolocation, pos) {
 
 // Initialize the map when the window loads
 window.onload = initMap;
+
+
+
+
+document.getElementById('reviewButton').addEventListener('click', function() {
+    document.getElementById('reviewSection').classList.remove('hidden');
+});
+
+const stars = document.querySelectorAll('.star');
+let selectedRating = 0;
+
+stars.forEach((star, index) => {
+    star.addEventListener('click', function() {
+        selectedRating = index + 1;
+        document.getElementById('rating').textContent = selectedRating;
+
+        // Highlight the selected stars
+        stars.forEach((s, i) => {
+            if (i < selectedRating) {
+                s.classList.add('selected');
+            } else {
+                s.classList.remove('selected');
+            }
+        });
+    });
+
+    star.addEventListener('mouseover', function() {
+        let hoverRating = index + 1;
+        stars.forEach((s, i) => {
+            if (i < hoverRating) {
+                s.classList.add('hover');
+            } else {
+                s.classList.remove('hover');
+            }
+        });
+    });
+
+    star.addEventListener('mouseleave', function() {
+        stars.forEach(s => s.classList.remove('hover'));
+    });
+});
+
+document.getElementById('submitRating').addEventListener('click', function() {
+    if (selectedRating > 0) {
+        alert(`Thank you for your rating of ${selectedRating} stars!`);
+        // Here you can add code to send the rating to the server or process it further
+    } else {
+        alert('Please select a rating before submitting.');
+    }
+});
