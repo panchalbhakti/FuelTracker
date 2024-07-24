@@ -61,12 +61,11 @@ function initMap() {
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
 
   locationButton.addEventListener('click', () => {
-      // Try HTML5 geolocation
       if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(position => {
               const pos = {
                   lat: position.coords.latitude,
-                  lng: position.coords.longitude
+                  lng: position.coords.longitude,
               };
 
               map.setCenter(pos);
@@ -80,7 +79,6 @@ function initMap() {
               handleLocationError(true, map.getCenter());
           });
       } else {
-          // Browser doesn't support Geolocation
           handleLocationError(false, map.getCenter());
       }
   });
