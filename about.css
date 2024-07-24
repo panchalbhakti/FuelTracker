@@ -42,6 +42,7 @@ header {
 
 .navbar-links li {
     margin-left: 20px;
+    font-size: 1.25rem;
 }
 
 .navbar-links a {
@@ -54,50 +55,122 @@ header {
     text-decoration: underline;
 }
 
-.navbar-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-.bar {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
+.about-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.section {
-    margin: 20px 0;
+.about-section h1,
+.about-section h2 {
+    color: #ff6600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-footer {
-    background-color: #f1f1f1;
+.about-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+.about-section p,
+.about-section ul {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.about-section ul {
+    padding-left: 20px;
+}
+
+.about-section ul li {
+    margin-bottom: 10px;
+}
+
+.about-section ul li::before {
+    content: '•';
+    color: #ff6600;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.footer-section {
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
+    bottom: 0;
+}
+
+.footer-section p {
+    margin: 0.5rem 0;
+}
+
+.footer-section a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
+    .navbar-links a {
+        font-size: 13px;
     }
 
-    .navbar-links li {
-        margin: 10px 0;
+    .navbar-brand a {
+        font-size: 15px;
     }
 
-    .navbar-toggle {
-        display: flex;
+    .about-section h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
     }
-
-    .navbar-links.active {
-        display: flex;
+    
+    .about-section h2 {
+        font-size: 1.2em;
+        margin-top: 20px;
     }
+    
+    .about-section p,
+    .about-section ul {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+    
 }

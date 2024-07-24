@@ -261,12 +261,13 @@ h4{
     }
 
     #map{
-        width: 23rem;
+        width: 21rem;
         height: 23rem;
     }
 
     .custom-map-control-button{
-        height: 25px;
+        height: 2.17rem;
+        width: 6rem;
     }
 
     #pac-input{
