@@ -58,7 +58,8 @@ function initMap() {
   const locationButton = document.createElement('button');
   locationButton.textContent = 'Current Location';
   locationButton.classList.add('custom-map-control-button');
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+//   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(locationButton);
 
   locationButton.addEventListener('click', () => {
       if (navigator.geolocation) {
@@ -112,7 +113,7 @@ window.onload = initMap;
 
 
 
-
+// Review Code
 document.getElementById('reviewButton').addEventListener('click', function() {
     document.getElementById('reviewSection').classList.remove('hidden');
 });
