@@ -216,7 +216,7 @@ header {
 }
 
 #reviewButton {
-    margin-left: 6rem;
+    margin-left: 40rem;
     margin-bottom: 1rem;
 }
 
@@ -250,6 +250,7 @@ header {
 #map {
     height: 500px;
     width: 700px;
+    margin-left: 15rem;  /* additional */
 }
 
 .custom-map-control-button {
@@ -297,8 +298,9 @@ header {
     }
 
     #map{
-        width: 22rem;
-        height: 23rem;
+        width: 21rem;
+        height: 22rem;
+        margin-left: 0rem;
     }
 
     .custom-map-control-button{
@@ -309,4 +311,11 @@ header {
     #pac-input{
         display: none;
     }
+
+    
+    #reviewButton {
+        margin-left: 5.5rem;  /* additional*/
+        margin-bottom: 1rem;  /* additional*/
+    }
+
 }
